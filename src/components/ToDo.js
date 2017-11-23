@@ -1,4 +1,4 @@
-// 1. import React and React's Component Calss
+// 1. import React and React's Component Class
 import React, { Component } from 'react';
 
 
@@ -7,7 +7,10 @@ class ToDo extends Component {
   // 3. Define a render() method on your class.
   render() {
     return (
-      <li>A todo will go here</li>
+      <li>
+        <input type="checkbox" checked={ this.props.isCompleted } />
+        <span>{ this.props.description }</span>
+      </li>
     );
   }
 }
